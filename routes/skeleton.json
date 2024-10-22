@@ -1,0 +1,143 @@
+{
+  "head": {
+    "title": "Blog Preview Card",
+    "link": [
+      {
+        "rel": "shortcut icon",
+        "href": "./static/images/favicon.ico",
+        "type": "image/x-icon"
+      }
+    ],
+    "meta": [
+      {
+        "name": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      {
+        "charset": "UTF-8"
+      },
+      {
+        "name": "description",
+        "content": "Blog Preview Card using CWrap framework."
+      },
+      {
+        "name": "keywords",
+        "content": ""
+      }
+    ]
+  },
+  "fonts": [
+    {
+      "font-family": "Figtree",
+      "src": "static/fonts/Figtree-VariableFont_wght.ttf",
+      "font-display": "swap"
+    }
+  ],
+  "root": {
+    "--color-yellow1": "#F4D04E"
+  },
+  "element": "body",
+  "style": "display: flex; align-items: center; justify-content: center; min-height: 100dvh; box-sizing: border-box; margin: 0; padding: 24px; background-color: var(--color-yellow1); font-family: Figtree;",
+  "children": [
+    {
+      "element": "main",
+      "style": "width: 384px; height: fit-content; background-color: white; border: 1px solid black; border-radius: 20px; box-shadow: 8px 8px black; display: flex; flex-direction: column; padding: 24px; box-sizing: border-box; gap: 24px; transition: 300ms;",
+      "extend": [
+        {
+          "extension": ":has(div:nth-of-type(1) > a:nth-of-type(1):hover)",
+          "style": "box-shadow: 16px 16px black;"
+        }
+      ],
+      "mediaQueries": [
+        {
+          "query": "max-width: 640px",
+          "style": "width: 327px;"
+        }
+      ],
+      "children": [
+        {
+          "element": "img",
+          "attributes": {
+            "src": "static/images/illustration-article.svg",
+            "alt": "Parker get out!"
+          },
+          "style": "border-radius: 10px;"
+        },
+        {
+          "element": "div",
+          "style": "display: flex; flex-direction: column; gap: 12px;",
+          "children": [
+            {
+              "element": "div",
+              "style": "height: 29px; display: flex; background-color: var(--color-yellow1); width: fit-content; margin: 0; padding-inline: 12px; align-items: center; border-radius: 4px;",
+              "children": [
+                {
+                  "element": "h1",
+                  "style": "font-size: 14px; font-weight: 800; margin: 0;",
+                  "text": "Learning"
+                }
+              ]
+            },
+            {
+              "element": "p",
+              "style": "font-size: 14px; font-weight: 500; line-height: 150%; margin: 0;",
+              "text": "Published 21 Dec 2023"
+            },
+            {
+              "element": "a",
+              "attributes": {
+                "href": "#"
+              },
+              "style": "font-weight: 800; font-size: 24px; line-height: 150%; color: black; text-decoration: none; cursor: pointer; transition: 150ms;",
+              "extend": [
+                {
+                  "extension": ":hover",
+                  "style": "color: var(--color-yellow1);"
+                }
+              ],
+              "mediaQueries": [
+                {
+                  "query": "max-width: 640px",
+                  "style": "font-size: 20px;"
+                }
+              ],
+              "text": "HTML & CSS foundations"
+            },
+            {
+              "element": "p",
+              "style": "line-height: 150%; font-size: 16px; font-weight: 500; color: #7F7F7F; margin: 0;",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 640px",
+                  "style": "font-size: 14px;"
+                }
+              ],
+              "text": "These languages are the backbone of every website, defining structure, content, and presentation."
+            }
+          ]
+        },
+        {
+          "element": "div",
+          "style": "margin: 0; display: flex; align-items: center; gap: 12px;",
+          "children": [
+            {
+              "element": "img",
+              "attributes": {
+                "src": "static/images/image-avatar.webp",
+                "width": "32px",
+                "height": "32px",
+                "alt": "avatar"
+              },
+              "style": ""
+            },
+            {
+              "element": "p",
+              "style": "font-weight: 800; font-size: 14px;",
+              "text": "Greg Hooper"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
